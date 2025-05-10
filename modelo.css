@@ -1,0 +1,263 @@
+/* FORMATO GENERAL */
+* {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0 45px; /* ← agrega 20px a izquierda y derecha */
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+
+
+/* HEADER Y MENÚ */
+header {
+  background-color: #000000;
+}
+.menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 60px;
+  background-color: #ffffff; /* Negro profundo */
+}
+.logo {
+  height: 50px;
+}
+.menu-container a {
+  text-decoration: none;
+  color: #1c3f94; /* Blanco */
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+.menu-container a:hover {
+  background-color: #1c3f94; /* Azul Ford */
+  color: #ffffff;
+ 
+}
+
+/* SECCIÓN PRINCIPAL */
+#imagen_principal {
+  background-image: url("https://www.ford.pe/content/dam/Ford/website-assets/latam/pe/nameplate/ranger/2024/overview/billboard/fpe-nueva-ranger-billboard.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 30px;
+  background-color: #1c3f94;
+}
+
+.mensaje1 {
+  color: white;
+  font-size: 35px;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 4px #000;
+}
+.mensaje2 {
+  background-color: #1c3f94;
+  color: white;
+  font-size: 14px;
+  padding: 12px 28px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(28, 63, 148, 0.4);
+  animation: pulse 2s infinite;
+  transition: all 0.3s ease;
+}
+
+.mensaje2:hover {
+  background-color: #153080;
+  transform: scale(1.05);
+}
+
+/* ANIMACIÓN PULSE */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(28, 63, 148, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(28, 63, 148, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(28, 63, 148, 0);
+  }
+}
+
+/* ARTÍCULOS */
+#articulo {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  background-color: #f4f4f4;
+}
+.art {
+  color: #4a4a4a;
+  font-size: 16px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* ESPECIFICACIONES TÉCNICAS */
+.especificaciones {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #f4f4f4;
+  padding: 30px 20px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.espec {
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+  padding: 10px 15px;
+  border-right: 1px solid #ddd;
+}
+
+.espec:last-child {
+  border-right: none;
+}
+
+.titulo {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.dato {
+  font-weight: bold;
+  font-size: 18px;
+  color: #00174f; /* azul oscuro Ford */
+}
+
+/* IMÁGENES EN LÍNEA */
+#imagenes_juntas {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #ffffff;
+}
+.imag img {
+  width: 275px;
+  height: 220px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.imag img:hover {
+  transform: scale(1.05);
+}
+
+/* FOOTER PROFESIONAL */
+.footer-profesional {
+  background-color: #0d1b2a; /* azul oscuro */
+  color: #f4f4f4;
+  padding: 40px 20px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer-busqueda {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0 0;
+}
+
+.busqueda-form {
+  display: flex;
+  background-color: #102542;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.busqueda-form input {
+  padding: 10px 12px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #ffffff;
+  width: 250px;
+}
+
+.busqueda-form button {
+  background-color: #1c3f94;
+  border: none;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.busqueda-form button:hover {
+  background-color: #153080;
+}
+
+.busqueda-form svg {
+  width: 18px;
+  height: 18px;
+}
+
+
+.footer-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 20px 0;
+}
+
+.footer-columna {
+  min-width: 160px;
+}
+
+.footer-columna h3 {
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #1c3f94;
+  padding-bottom: 5px;
+}
+
+.footer-columna ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-columna li {
+  margin-bottom: 8px;
+}
+
+.footer-columna a {
+  text-decoration: none;
+  color: #dcdcdc;
+  transition: 0.3s;
+}
+
+.footer-columna a:hover {
+  color: #1c3f94;
+  text-decoration: underline;
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #aaaaaa;
+}
+
